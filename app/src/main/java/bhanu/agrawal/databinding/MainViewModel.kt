@@ -1,9 +1,9 @@
 package bhanu.agrawal.databinding
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import android.databinding.BaseObservable
-import android.databinding.Bindable
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
 
 class MainViewModel: ViewModel(){
 
@@ -13,9 +13,7 @@ class MainViewModel: ViewModel(){
         name.postValue("Enter your name")
     }
 
-
-    @Bindable
-    fun getName(): String{
+/*    fun getName(): String{
         return name.value.toString()
     }
 
@@ -24,6 +22,6 @@ class MainViewModel: ViewModel(){
         if(!this.name.value.equals(name)){
             this.name.postValue(name)
         }
-    }
+    }*/
 
 }
