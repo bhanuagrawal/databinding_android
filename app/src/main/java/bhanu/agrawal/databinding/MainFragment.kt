@@ -2,6 +2,7 @@ package bhanu.agrawal.databinding
 
 
 import android.os.Bundle
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,7 +22,10 @@ class MainFragment : Fragment() {
         binding = FragmentMainBinding.inflate(inflater, container, false)
         val viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         binding.viewmodel = viewModel
+        binding.lifecycleOwner = this
         return binding.root
+
+
     }
 
 

@@ -2,26 +2,17 @@ package bhanu.agrawal.databinding
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.databinding.BaseObservable
-import androidx.databinding.Bindable
 
-class MainViewModel: ViewModel(){
+open class MainViewModel: ViewModel(){
 
-    private val name = MutableLiveData<String>()
+    var name = MutableLiveData<String>()
 
-    init {
-        name.postValue("Enter your name")
+    init{
+        name.postValue("sdfsdf")
     }
 
-/*    fun getName(): String{
-        return name.value.toString()
+    fun onNameTextChanged(name: String){
+        this.name.postValue(name)
     }
-
-
-    fun setName(name: String){
-        if(!this.name.value.equals(name)){
-            this.name.postValue(name)
-        }
-    }*/
 
 }
